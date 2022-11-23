@@ -1,0 +1,8 @@
+<mat-card>
+  <mat-card-title><h1><b>Employee list</b></h1></mat-card-title>
+  <mat-card-content>
+    <mat-list role="list">
+      <mat-list-item role="listitem" *ngFor="let item of list$ | async">{{item.id}} {{item.name}}</mat-list-item>
+    </mat-list>
+  </mat-card-content>
+</mat-card>
