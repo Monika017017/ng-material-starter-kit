@@ -1,8 +1,10 @@
 <mat-card>
-  <mat-card-title><h1><b>Employee list</b></h1></mat-card-title>
-  <mat-card-content>
+  <p class="text-center">
+  <mat-card-title><h1><b>Employee list</b></h1> </mat-card-title> </p>
+    <mat-card-content>
     <mat-list role="list">
-      <mat-list-item role="listitem" *ngFor="let item of list$ | async">{{item.id}} {{item.name}}</mat-list-item>
+      <mat-list-item role="listitem" *ngFor="let item of list$ | async">
+        <b> <p class="text-info">{{item.id}} {{item.name}} </p> </b> </mat-list-item>
     </mat-list>
   </mat-card-content>
 </mat-card>
