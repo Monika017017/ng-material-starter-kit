@@ -4,6 +4,7 @@ import {EmployeeListComponent} from './components/employee-list/employee-list.co
 import {EmployeeFormComponent} from './components/employee-form/employee-form.component';
 import {HomeComponent} from './components/home/home.component';
 import {ProductTableComponent} from './components/product-table/product-table.component';
+import {EmployeeDetailsComponent} from './components/employee-details/employee-details.component';
 import {EmployeeListComponentModule} from './components/employee-list/employee-list.component-module';
 import {EmployeeListServiceModule} from './services/employee-list.service-module';
 import {EmployeeFormComponentModule} from './components/employee-form/employee-form.component-module';
@@ -11,6 +12,7 @@ import {EmployeeServiceModule} from './services/employee.service-module';
 import {HomeComponentModule} from './components/home/home.component-module';
 import {ProductTableComponentModule} from './components/product-table/product-table.component-module';
 import {ProductTableServiceModule} from './services/product-table.service-module';
+import {EmployeeDetailsComponentModule} from './components/employee-details/employee-details.component-module';
 
 const routes: Routes = [{path: 'employee-list', component: EmployeeListComponent}, {
   path: 'create-employee',
@@ -18,10 +20,13 @@ const routes: Routes = [{path: 'employee-list', component: EmployeeListComponent
 }, {path: '', component: HomeComponent}, {
   path: 'product-table',
   component: ProductTableComponent
-}, {path: 'product-search', component: ProductTableComponent}];
+}, {path: 'product-search', component: ProductTableComponent}, {
+  path: 'employee-details/:id/:name',
+  component: EmployeeDetailsComponent
+}];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes), EmployeeListComponentModule, EmployeeListServiceModule, EmployeeFormComponentModule, EmployeeServiceModule, HomeComponentModule, ProductTableComponentModule, ProductTableServiceModule],
+  imports: [RouterModule.forRoot(routes), EmployeeListComponentModule, EmployeeListServiceModule, EmployeeFormComponentModule, EmployeeServiceModule, HomeComponentModule, ProductTableComponentModule, ProductTableServiceModule, EmployeeDetailsComponentModule],
   exports: [RouterModule]
 })
 export class AppRoutingModule {
