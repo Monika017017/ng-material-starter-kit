@@ -1,0 +1,6 @@
+<mat-card><mat-card-title></mat-card-title>
+  <mat-card-content>
+  <ng-container *ngIf="genderUser$ | async as item"><h1>Gender</h1>
+<p>{{ item.gender }}</p></ng-container>
+  </mat-card-content>
+</mat-card>
